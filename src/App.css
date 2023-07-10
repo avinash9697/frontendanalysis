@@ -1,0 +1,340 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* background-image: linear-gradient(to right, #f7dfec,#e7cfe7,#f7dfe7); */
+  margin: 0%;
+}
+
+.app {
+  position: relative;
+  background-image: url("https://www.nuron.co.in/wp-content/uploads/2022/07/bg-1.png");
+  background-size: cover;
+  min-height: 100vh;
+  max-width: 100vw;
+}
+
+.navbar{
+  background-color: rgba(255,255,255);
+  position:absolute; 
+  position: fixed;
+  top:0;
+  z-index: 10; 
+  height : 80px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+} 
+
+.logoimage{
+  padding: 12px;
+  height: 80px;
+  width: 160px;
+  margin-left: 15px;
+} 
+
+.vertical-line {
+  border-left: 1px solid #d13590;
+  height: 100px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.heading{
+  color: #d13590;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.heading2 {
+  color: #c22a83;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin-right: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.heading2:hover {
+  transform: scale(1.2);
+}
+
+.div2 {
+  display: flex;
+  padding: 7px;
+}
+
+.second-div{ 
+  /* margin-top:80px; */
+  margin-left: 30px;
+  padding-top: 65px;
+  display:flex;
+  height : 45vh;
+} 
+
+input[type="date"] {
+  background-color: #f5f5f5;
+  padding: 12px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: black;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+::-webkit-calendar-picker-indicator {
+  background-color: #ffffff;
+  padding: 5px;
+  cursor : pointer;
+  border-radius: 3px;
+}
+input[type="date"]:hover{
+  box-shadow: 5px 5px 5px rgba(0,0,0, 0.2),-5px -5px 5px rgb(0,0,0,0.2);
+}
+
+.text-div{
+  margin-top: 30px;
+  width: 50%;
+  height: 30vh;
+}
+
+.form-div{
+  background-color: rgba(255,255,255,0.8);
+  height: 75vh;
+  width: 25%;
+  margin-top:30px;
+  margin-right : 30px;
+  border-radius: 10px;
+  padding:20px;
+  display:flex;
+  flex-direction: column;
+}
+
+.heading3 {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 26px;
+}
+.para {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 16px;
+  margin-top: 7px;
+}
+
+.graph {
+  background-color: #f5f5f5;
+  background-image: none;
+}
+
+.icon1 {
+  height :300px;
+  width : 300px;
+  background-color: transparent;
+}
+
+.inputs-div{
+  background-color: rgba(252, 196, 252, 0.8);
+  display: flex;
+  flex-direction: column;
+  padding:20px;
+  height: 50vh;
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-top: -120px;
+  border-radius: 30px;
+  width: 50%;
+  position: relative;
+  z-index: 2;
+}
+
+.bubble-image {
+  height : 100px;
+  width: 300px;
+  margin-left: -40px;
+}
+
+.department {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.dropdown-container {
+  position: relative;
+  width: 200px; 
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.dropdown:hover {
+  background-color: #f5f5f5;
+}
+
+.selected-option {
+  display: block;
+  padding: 10px;
+  font-size: 16px;
+  transition: color 0.3s ease-in-out;
+}
+
+.options {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-top: none;
+  border-radius: 0 0 4px 4px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.dropdown:hover .options {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.options li {
+  padding: 10px;
+  font-size: 16px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.options li:hover {
+  background-color: #f5f5f5;
+}
+
+.div-1 {
+  display: flex;
+  justify-content: space-around;
+}
+
+.div-2{
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.from-date{
+  display: flex;
+  flex-direction: column;
+  margin-left: 60px;
+}
+
+.to-date {
+  display: flex;
+  flex-direction: column;
+  margin-right: 60px;
+}
+
+.from-label {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.to-label {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.button1 {
+  height:50px;
+  width : 150px;
+  background-color: #ffffff;
+  border-width: 0px;
+  border-radius: 10px;
+  margin-top: 20px;
+  margin-left: 250px;
+}
+.button1:hover{
+  box-shadow: 5px 5px 5px rgba(0, 0,0, 0.2),-5px -5px 5px rgba(0, 0,0, 0.2);
+}
+
+.bubble-image2{
+  height : 100px;
+  width: 300px;
+  margin-left: 107%;
+  margin-top: -70px;
+}
+
+.image1 {
+  height : 100px;
+  width: 150px;
+  position: absolute;
+  transform: translate(-60px,180px);
+  
+}
+/* 
+.third-div{ */
+  /* position: relative; */
+  /* z-index: 2;
+} */
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.errorMsg {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 17px;
+  text-align: center;
+  margin-top: 20px;
+  color:#c22a83;
+  font-weight: bold;
+  animation: blink 1s infinite;
+}
+
+.graph-image {
+  height : 220px;
+  width: 250px;
+  margin-top:-26px;
+  margin-left: 10px;
+}
+
+.graph-image1{
+  height : 200px;
+  width: 250px;
+}
+
+.image-div{
+  padding-top: 30px;
+  position: relative;
+  padding-left: 150px;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  z-index: 10;
+}
+/* 
+.bubble-image3{
+  height : 100px;
+  width : 300px;
+  margin-right: 60%;
+  margin-bottom: -300px;
+} */
